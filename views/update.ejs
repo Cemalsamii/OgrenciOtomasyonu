@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Başarsoft Personel Kontrol Panel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <img src="https://www.logovector.org/wp-content/uploads/logos/png/o/ondokuz_mayis_universitesi_logo.png" width="200" height="200" class="mw-100" alt="Logo">
+    <div class="container">
+        <h4 class="text-center">Öğrenci Güncelleme</h4>
+        <form method="POST">
+            <% data.forEach( data=> { %>
+                <div class="form-group">
+                    <label for="name">İsim</label>
+                    <input type="text" class="form-control" id="name" name="Isim" placeholder="İsim Giriniz" value="<%= data.isim %>">
+                </div>
+                <div class="form-group">
+                    <label for="surname">Soyisim</label>
+                    <input type="text" class="form-control" id="Soyisim" name="Soyisim" placeholder="Soyisim Giriniz" value="<%= data.soyisim %>">
+                </div>
+                <div class="form-group">
+                    <label for="gender">Cinsiyet</label>
+                    <select class="form-control" id="gender" name="Cinsiyet">
+                <option name="<%= data.cinsiyet %>"><%= data.cinsiyet %></option>
+                <option name="Erkek">Erkek</option>
+                <option name="Kadın">Kadın</option>
+            </select>
+                </div>
+                <div class="form-group">
+                    <label for="faculty">Fakülte</label>
+                    <select class="form-control" name="Fakulte" id="faculty">
+                    <option name="<%= data.fakulte %>"><%= data.fakulte %></option>
+                    <option name="Ali Fuad Başgil Hukuk Fakültesi">Ali Fuad Başgil Hukuk Fakültesi</option>
+                    <option name="Bafra İşletme Fakültesi">Bafra İşletme Fakültesi</option>
+                    <option name="İnsan ve Toplum Bilimleri Fakültesi">İnsan ve Toplum Bilimleri Fakültesi</option>
+                    <option name="Diş Hekimliği Fakültesi">Diş Hekimliği Fakültesi</option>
+                    <option name="Eczacılık Fakültesi">Eczacılık Fakültesi</option>
+                    <option name="Eğitim Fakültesi">Eğitim Fakültesi</option>
+                    <option name="Fen-Edebiyat Fakültesi">Fen-Edebiyat Fakültesi</option>
+                    <option name="Güzel Sanatlar Fakültesi">Güzel Sanatlar Fakültesi</option>
+                    <option name="İktisadi ve İdari Bilimler Fakültesi">İktisadi ve İdari Bilimler Fakültesi</option>
+                    <option name="İlahiyat Fakültesi">İlahiyat Fakültesi</option>
+                    <option name="İletişim Fakültesi">İletişim Fakültesi</option>
+                    <option name="Mimarlık Fakültesi">Mimarlık Fakültesi</option>
+                    <option name="Mühendislik Fakültesi">Mühendislik Fakültesi</option>
+                    <option name="Sağlık Bilimleri Fakültesi">Sağlık Bilimleri Fakültesi</option>
+                    <option name="Tıp Fakültesi">Tıp Fakültesi</option>
+                    <option name="Turizm Fakültesi">Turizm Fakültesi</option>
+                    <option name="Veteriner Fakültesi">Veteriner Fakültesi</option>
+                    <option name="Yaşar Doğu Spor Bilimleri Fakültesi">Yaşar Doğu Spor Bilimleri Fakültesi</option>
+                    <option name="Ziraat Fakültesi">Ziraat Fakültesi</option>
+                </select>
+                </div>
+                <div class="form-group">
+                    <label for="department">Bölüm</label>
+                    <input type="text" class="form-control" id="department" name="Bolum" placeholder="Bölümü Giriniz" value="<%= data.bolum %>">
+                </div>
+                <div class="form-group">
+                    <label for="entry">Giriş</label>
+                    <input type="text" class="form-control" id="entry" name="Giris" placeholder="Giriş Yılını Giriniz" value="<%= data.giris %>">
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Güncelle</button>
+                <% }) %>
+        </form>
+
+        <strong><em>
+                <footer class="text-center mb-4">Ondokuz Mayıs Üniversitesi &copy;</footer></strong></em>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>
